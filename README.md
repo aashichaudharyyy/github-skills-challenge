@@ -89,7 +89,7 @@ the same anomaly-events topic.
 This AIOps approach is rule-based and uses fixed thresholds. It works well for this small dataset, but it may miss new patterns or create false alarms when the system changes over time. A better version would use dynamic baselines or trend-based thresholds instead of fixed values.
 
 # 9. Steps required 
-python3 -m json.tool data/service_data.json
-python3 src/aiops_pipeline.py
-pyton3 -m pytest -q
-python3 src/aiops_pipeline.py
+- python3 -m json.tool data/service_data.json
+- python3 src/aiops_pipeline.py
+- pyton3 -m pytest -q
+- python3 src/aiops_pipeline.py
