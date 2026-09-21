@@ -70,3 +70,10 @@ def test_consumer_receives_event():
     messages = consumer.consume()
 
     assert len(messages) == 1
+
+def test_pipeline_consumes_detected_events():
+    result = run_pipeline("data/service_data.json")
+
+    assert result["records_processed"] == 10
+    assert len(result["anomalies_detected"]) == 2
+    assert len(result["events_consumed"]) == 2
